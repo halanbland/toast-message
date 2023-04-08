@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#toast {
+    position: fixed;
+    top: 30px;
+    right: 30px;
+}
+
+.toast {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 200px;
+    max-width: 400px;
+    border-left: 4px solid ;
+    border-radius: 2px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+    padding: 12px 0;
+    animation: slideToLeft ease-in 0.3s, ;
+
+}
+
+@keyframes slideToLeft {
+    from {
+        opacity: 0;
+        transform: translateX(calc(100% + 30px));
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+    }
+}
+
+.toast + .toast {
+    margin-top: 20px;
+}
+
+.toast--success {
+    border-color: #40d25c;
+}
+
+.toast--success .toast__check{
+    color: #40d25c;
+}
+
+.toast--success .toast__close {
+    color: #40d25c;
+}
+
+.toast--warning {
+    border-color: #f1b222;
+}
+
+.toast--warning .toast__check{
+    color: #f1b222;
+}
+
+.toast--warning .toast__close {
+    color: #f1b222; 
+}
+
+.toast--error {
+    border-color: #da4a29;
+}
+
+.toast--error .toast__check{
+    color: #da4a29;
+}
+
+.toast--error .toast__close {
+    color: #da4a29;
+}
+
+.toast__close,
+.toast__check {
+    padding: 0 16px;
+    cursor: pointer;
+}
+
+.toast__check {
+    font-size: 24px;
+}
+
+.toast__body {
+    flex-grow: 1;
+}
+
+.toast__title {
+    
+}
+
+.toast__msg {
+    font-weight: 200;
+    margin-top: 6px;
+    font-size: 14px;
+}
+
+.toast__close {
+    font-size: 20px;
+    
+}
+
+.btn-show {
+    /* display: flex; */
+    /* justify-content: center; */
+}
+
+.btn {
+    max-width: 200px;
+    min-width: 60px;
+    padding: 0 12px;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 50px;
+    cursor: pointer;
+    margin: auto;
+    text-align: center;
+    line-height: 40px;
+    color: #fff;
+}
+
+.btn:active {
+    opacity: 0.9;
+}
+
+.btn.btn--success {
+    background-color: #40d25c;
+}
+
+.btn.btn--error {
+    background-color: #da4a29;
+}
